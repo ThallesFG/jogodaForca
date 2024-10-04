@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Jogo da Forca - Tema: {{ tema }}</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Jogo da Forca - Tema: {{ tema }}</h1>
+        <div id="forca"></div>
+        <div id="palavra"></div>
+        <div id="mensagem"></div>
+        <div id="pontuacao"></div>
+        <div id="cronometro"></div>
+
+        <input type="text" id="letra" maxlength="1" placeholder="Digite uma letra" />
+        <button id="adivinhar">Adivinhar</button>
+        <button id="reiniciar" style="display: none;">Reiniciar</button>
+
+        <button onclick="window.location.href='/'">Escolher outro tema</button>
+
+        <script src="{{ url_for('static', filename='script.js') }}"></script>
+    </div>
+</body>
+</html>
